@@ -14,8 +14,19 @@ layout:
   extra_height_usage: "safe sky area; physics geometry is not stretched"
 validated:
   - profile: youdao-cv182x-3.4.6
+    tested_at: "2026-08-24"
     physical: "254x800 rotated 270 degrees"
     logical: "800x254"
+    checks:
+      - "AMR install and explicit start"
+      - "ready screen and bottom controls"
+      - "About dialog and close action"
+      - "driving, throttle and coin pickup"
+      - "HUD, vehicle, terrain and physics-scene placement"
+    evidence:
+      - "releases/adaptive-1.3.0/device-ready.png"
+      - "releases/adaptive-1.3.0/device-about.png"
+      - "releases/adaptive-1.3.0/device-driving.png"
 not_validated:
   - "other Youdao models"
   - "other Falcon firmware versions"

@@ -15,7 +15,9 @@
 - Strategy: `setViewPort(800)` + full-height flex page + fixed bottom controls + bottom-anchored 166-unit physics scene.
 - Detailed design: `docs/SCREEN_ADAPTATION.md`.
 - Automated layout/storage/physics/content tests pass and AMR packaging succeeds.
-- Current limitation: ADB disconnected before 1.3.0 installation, so only X5 1.2.1 has fresh real-device evidence. Other models remain unverified candidates.
+- On 2026-08-24, the adaptive AMR was installed and started on X5/cv182x firmware 3.4.6. The ready screen, About dialog, driving, throttle, coin pickup, HUD, terrain and controls were checked on hardware.
+- Evidence: `device-ready.png`, `device-about.png`, and `device-driving.png` in the adaptive release directory.
+- Current limitation: the adaptive edition has only been regressed on X5. Other Youdao models and Falcon firmware versions remain unverified candidates.
 
 ## Repository
 
