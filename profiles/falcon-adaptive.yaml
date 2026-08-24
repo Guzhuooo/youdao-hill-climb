@@ -1,0 +1,26 @@
+﻿profile_id: falcon-adaptive-width-800
+status: "candidate; requires per-model verification"
+runtime:
+  required: "Falcon mini-app runtime with QuickJS target 20200705 compatibility"
+viewport:
+  orientation: landscape
+  design_width: 800
+  minimum_logical_height: 254
+  method: "setViewPort(800) plus full-height flex layout"
+layout:
+  controls_height: 50
+  physics_scene_height: 166
+  scene_anchor: bottom
+  extra_height_usage: "safe sky area; physics geometry is not stretched"
+validated:
+  - profile: youdao-cv182x-3.4.6
+    physical: "254x800 rotated 270 degrees"
+    logical: "800x254"
+not_validated:
+  - "other Youdao models"
+  - "other Falcon firmware versions"
+  - "logical heights below 254"
+notes:
+  - "Public Falcon JSAPI on the validated firmware exposes no stable screen-size query."
+  - "The runtime derives scale from the fixed design width; page height is filled with percentages/flex."
+  - "Non-Falcon devices cannot install this AMR."

@@ -1,0 +1,86 @@
+profile_id: youdao-cv182x-3.4.6
+model: "Youdao Dictionary Pen / cv182x (commercial model not exposed by read-only probes)"
+firmware: "3.4.6, built 2026-03-30"
+runtime:
+  falcon: "system miniapp runtime; exact framework version not exposed"
+  vue: "bundled by aiot-vue-cli"
+  quickjs: "20200705 package target"
+  api: "miniapp_cli install/start/capture available"
+abi:
+  machine: "armv7l / ARMv7 Processor rev 4"
+  bits: 32
+  libc: "glibc 2.23"
+  loader: "not yet pulled for readelf verification"
+  toolchain: "W:/webviewer/tools/armv7-eabihf--glibc--stable-2018.11-1"
+screen:
+  logical: { width: 800, height: 254 }
+  physical: { width: 254, height: 800, direction: 270, xoffset: 0, yoffset: 0 }
+  framebuffer: { virtual_width: 256, virtual_height: 1600, bpp: 32, driver: cvifb }
+  touch: { device: SITRONIX, direction: 270, xoffset: 113, yoffset: 0 }
+input_method:
+  version: "system package 8001666679481944"
+  global_text_edit: untested
+  textarea_soft_input: untested
+media:
+  gstreamer: untested
+  decoder: untested
+  kms_driver: "not required by this UI-only game"
+  connector: null
+  crtc: null
+  plane: null
+package:
+  appid: "8001799000000002"
+  version: "1.2.1"
+  start_page: "index"
+validation:
+  tested_at: "2026-08-24 Asia/Shanghai"
+  evidence:
+    - "adb devices -l: device connected"
+    - "uname -a/-m: Linux 4.19.164, armv7l"
+    - "ldd --version: GNU libc 2.23"
+    - "/etc/miniapp/resources/cfg.json: 254x800, direction/tp_direction 270"
+    - "miniapp_cli --help shows --{page}, but firmware 3.4.6 actually requires positional page: start <appid> index"
+    - "send_event/evtest: raw touch range 480x800; verified mapping rawX=logicalY+113, rawY=800-logicalX"
+    - "real-device gameplay: start, throttle, brake, coin pickup and pause verified by framebuffer captures"
+    - "real-device 1.1.0: smooth terrain, 72 km/h driving, pickup, suspension links and body pose verified"
+    - "garage: engine/tank upgrades verified; Falcon storage retained engine Lv.1 after app switching"
+    - "two foreground/background cycles via another Falcon app; QuickJS GC memory stable between return cycle 1 and 2"
+    - "1.1.1 terrain/render batching: physics 40ms, UI/world sync 80ms; active CPU sample 74.9%, paused 0%"
+    - "1.1.1 two lifecycle cycles: QuickJS objects unchanged at 54261; memory used delta 142 bytes"
+    - "1.1.2 no visible suspension rods; 62 terrain nodes with stable keys; active CPU sample 66.6%"
+    - "storage schema v3 reset: bank 30, upgrades 0; fuel spacing 23 pickups and refill 8"
+    - "1.1.3 real-device uphill full-throttle sample: 62 km/h; airborne screenshot shows wheels clear of terrain"
+    - "1.1.3 difficulty regression: steep-up avg 10.38, downhill avg 13.31, longest air 25 ticks, wheel clearance 16px"
+    - "storage schema v4 reset: bank 30, upgrades 0"
+    - "1.1.4 real-device: repeated visible airborne arcs; uphill sample 41 km/h; body lowered 4px to meet wheels"
+    - "1.1.4 terrain: overlapping thick strips remove brown steps and segment seam leaks"
+    - "1.1.4 difficulty regression: steep-up avg 10.2237, downhill avg 13.0474, airborne 299/1500 ticks, longest 32 ticks, clearance 48.574px"
+    - "storage schema v5 reset: bank 30, upgrades 0"
+    - "1.1.5 natural launch: inherited filtered terrain velocity; no fixed vertical impulse; 32-tick landing cooldown"
+    - "1.1.5 difficulty regression: steep-up avg 10.4047, downhill avg 12.9852, airborne 226/1500 ticks, longest 20 ticks, clearance 13.657px"
+    - "1.1.5 continuity regression: max launch velocity delta 1.891; max wheel top delta 2px/tick"
+    - "1.1.5 real-device: 26-frame sequence verifies low takeoff, visible airborne clearance and stable landing"
+    - "1.1.5 final reinstall: ready page at 0m with 30 garage coins"
+    - "production AMR SHA-256: 8BD2AA5048EAFDBA1B56A093F9B817E3AFA1DC9CCBBC7966E1C3D1D507120C10"
+    - "1.1.6 contact correction: body baseline -65px and next-tick terrain sampling; no visible tire burial in 28-frame device sequence"
+    - "1.1.6 difficulty regression: steep-up avg 10.2260, downhill avg 12.9149, airborne 242/1500 ticks, longest 22 ticks, clearance 35.831px"
+    - "1.1.6 contact regression: grounded penetration 3.934px max; opposite-wheel gap 4.947px max; wheel top delta 4.8px/tick"
+    - "storage schema v6 reset: bank 30, upgrades 0"
+    - "1.1.6 final reinstall: ready page at 0m with 30 garage coins"
+    - "production AMR SHA-256: C338963A3F4D5D13D9E39EF16E311B8BC2B5DE1EECB7D0E98E21C8B573764538"
+    - "1.1.7 low-long arc: launch speed contribution 0.04, crest contribution 0.06, gravity 0.25"
+    - "1.1.7 difficulty regression: steep-up avg 10.0773, downhill avg 12.7282, airborne 359/1500 ticks, longest 29 ticks, clearance 27.721px"
+    - "1.1.7 contact regression: grounded penetration 0.674px max; grounded gap 1.253px max; wheel extension up to 6.4px/tick"
+    - "1.1.7 real-device: 32-frame sequence verifies lower, longer flight and tight tire contact"
+    - "storage schema v7 reset: bank 30, upgrades 0"
+    - "1.1.7 final reinstall: ready page at 0m with 30 garage coins"
+    - "production AMR SHA-256: 5F36ABF60E7DD4AB5576A0AEA87B655C513F45AF3260ECE9C45AD0D34BB33709"
+    - "1.2.0 content regression: 4 maps, 4 vehicles, all 16 combinations finite and drive beyond 500 units in 600 ticks"
+    - "1.2.0 real-device garage: vehicle/map/upgrade tabs fit at 800x254; wallet, traits, prices and selected states visible"
+    - "1.2.0 real-device unlock persistence: 弹跳甲虫 and 赤岩风口 remained selected after reinstall/start"
+    - "1.2.0 real-device gameplay: distinct beetle body and red canyon terrain verified; terrain surface has no mismatched green edge"
+    - "1.2.0 production AMR size 23031 bytes; SHA-256 7673B6FBB8DE5AE579B2CC8FB83226C1CF00B37BE211AD7AE06F2B42A78870A8"
+    - "1.2.1 about dialog and GuZhuooo five-tap reward verified on device; 10000000 coins persisted after app switch"
+    - "1.2.1 progress storage namespace migrated from hill_climb_progress_v7 to /userdata/miniapp/hill_climb_ridge/progress.json"
+    - "Firmware lacks QuickJS std/os modules; Falcon storage API still owns the physical backing store"
+    - "1.2.1 production AMR size 23958 bytes; SHA-256 38E2DCD30D9CF07721EC61CF2A86481AD48D214BFB6BEE931CB5C8861B49AF30"

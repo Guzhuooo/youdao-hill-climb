@@ -1,0 +1,158 @@
+﻿.page { position: relative; width: 800px; height: 100%; min-height: 254px; flex-direction: column; background-color: #102a43; }
+.sky { width: 800px; min-height: 204px; flex: 1; position: relative; overflow: hidden; background-color: #82d2f3; }
+.hud { position: absolute; left: 0px; top: 0px; width: 800px; height: 38px; flex-direction: row; align-items: center; background-color: #17324d; border-bottom-width: 3px; border-bottom-color: #f4c430; z-index: 20; }
+.hud-cell { height: 35px; flex-direction: row; align-items: center; }
+.hud-score { width: 170px; padding-left: 14px; }
+.hud-coins { width: 112px; justify-content: center; }
+.hud-label { color: #9fc1d7; font-size: 14px; margin-right: 8px; }
+.hud-value { color: #ffffff; font-size: 20px; font-weight: bold; }
+.coin-dot { color: #ffd84a; font-size: 22px; margin-right: 7px; }
+.fuel-box { width: 430px; height: 35px; flex-direction: row; align-items: center; }
+.fuel-label { width: 50px; color: #ffffff; font-size: 14px; }
+.fuel-track { width: 360px; height: 12px; background-color: #0a1d2e; border-radius: 6px; overflow: hidden; border-width: 1px; border-color: #53718a; }
+.fuel-fill { height: 10px; border-radius: 5px; }
+.pause-btn { width: 58px; height: 35px; justify-content: center; align-items: center; background-color: #244966; }
+.pause-text { color: #ffffff; font-size: 20px; font-weight: bold; }
+.scene { position: absolute; left: 0px; bottom: 0px; width: 800px; height: 166px; overflow: hidden; }
+.sun { position: absolute; right: 72px; top: 53px; width: 48px; height: 48px; border-radius: 24px; background-color: #ffd45b; }
+.cloud { position: absolute; width: 96px; height: 22px; border-radius: 12px; background-color: #dff5ff; }
+.cloud-a { left: 80px; top: 79px; }
+.cloud-b { left: 565px; top: 104px; transform: scale(0.72); }
+.cloud-puff { position: absolute; background-color: #dff5ff; border-radius: 18px; }
+.puff-a { left: 15px; top: -12px; width: 38px; height: 32px; }
+.puff-b { left: 48px; top: -8px; width: 30px; height: 28px; }
+.terrain-column { position: absolute; background-color: #95562f; }
+.grass-strip { position: absolute; height: 20px; transform-origin: 0px 0px; background-color: #95562f; border-top-width: 4px; border-top-color: #72c94b; z-index: 3; }
+.car { position: absolute; width: 112px; height: 82px; z-index: 10; }
+.body-frame { position: absolute; left: 0px; top: 4px; width: 112px; height: 50px; transform-origin: 56px 32px; z-index: 4; }
+.car-body { position: absolute; left: 9px; top: 10px; width: 94px; height: 21px; background-color: #e84c32; border-radius: 8px; border-width: 3px; border-color: #8e281f; }
+.car-cabin { position: absolute; left: 30px; top: 0px; width: 50px; height: 23px; background-color: #d73c2a; border-top-left-radius: 12px; border-top-right-radius: 10px; border-width: 3px; border-color: #8e281f; }
+.window { position: absolute; left: 9px; top: 4px; width: 29px; height: 14px; background-color: #c9effb; border-radius: 4px; }
+.driver { position: absolute; left: 28px; top: 7px; width: 9px; height: 9px; border-radius: 5px; background-color: #f2b36f; }
+.bumper { position: absolute; left: -10px; top: 12px; width: 16px; height: 7px; background-color: #d9e2e8; }
+.lamp { position: absolute; right: 2px; top: 5px; width: 8px; height: 8px; border-radius: 4px; background-color: #ffe36d; }
+.stripe { position: absolute; left: 25px; top: 9px; width: 39px; height: 5px; background-color: #ffd45b; transform: rotate(-4deg); }
+.wheel { position: absolute; width: 25px; height: 25px; border-radius: 13px; background-color: #17222d; border-width: 3px; border-color: #060b10; justify-content: center; align-items: center; z-index: 6; }
+.hub { width: 10px; height: 10px; border-radius: 5px; background-color: #d8e0e5; border-width: 2px; border-color: #56636d; }
+.pickup { position: absolute; z-index: 8; justify-content: center; align-items: center; }
+.pickup-coin { width: 25px; height: 25px; border-radius: 13px; background-color: #ffd84a; border-width: 3px; border-color: #d99814; }
+.pickup-fuel { width: 31px; height: 39px; border-radius: 5px; background-color: #ef4b45; border-width: 3px; border-color: #a82228; }
+.pickup-text { color: #ffffff; font-size: 16px; font-weight: bold; }
+.overlay { position: absolute; left: 0px; top: 0px; width: 800px; height: 166px; z-index: 30; align-items: center; justify-content: center; background-color: #17324d; }
+.splash-overlay { flex-direction: row; }
+.title-badge { width: 190px; height: 118px; flex-direction: column; justify-content: center; align-items: center; background-color: #f4c430; border-radius: 14px; border-width: 4px; border-color: #fff0a0; transform: rotate(-3deg); }
+.title-top { color: #7b301f; font-size: 16px; font-weight: bold; }
+.title-main { color: #17324d; font-size: 31px; line-height: 38px; font-weight: bold; }
+.physics-tag { color: #ffffff; font-size: 13px; background-color: #e84c32; padding-left: 10px; padding-right: 10px; border-radius: 7px; }
+.splash-center { width: 270px; margin-left: 25px; margin-right: 20px; flex-direction: column; }
+.splash-copy { color: #d9edf7; font-size: 19px; lines: 2; }
+.bank-copy { color: #ffd84a; font-size: 17px; margin-top: 12px; }
+.splash-actions { width: 190px; flex-direction: column; }
+.start-btn, .garage-btn { width: 185px; height: 52px; justify-content: center; align-items: center; border-radius: 10px; border-width: 3px; }
+.start-btn { background-color: #e84c32; border-color: #ff8e65; }
+.garage-btn { margin-top: 9px; background-color: #2f7c48; border-color: #63b874; }
+.start-text, .garage-btn-text { color: #ffffff; font-size: 22px; font-weight: bold; }
+.gameover { flex-direction: column; }
+.over-title { color: #ffffff; font-size: 31px; font-weight: bold; }
+.over-score { color: #cbe3ef; font-size: 18px; margin-top: 8px; margin-bottom: 12px; }
+.over-actions { flex-direction: row; }
+.restart { width: 190px; height: 48px; margin-left: 8px; margin-right: 8px; margin-top: 0px; }
+.pause-overlay { position: absolute; left: 280px; top: 39px; width: 240px; height: 90px; z-index: 25; flex-direction: column; justify-content: center; align-items: center; border-radius: 12px; background-color: #17324d; border-width: 3px; border-color: #f4c430; }
+.pause-title { color: #ffffff; font-size: 27px; font-weight: bold; }
+.pause-tip { color: #b9d6e6; font-size: 15px; margin-top: 5px; }
+.garage-overlay { flex-direction: column; justify-content: flex-start; }
+.garage-head { width: 540px; height: 38px; flex-direction: row; align-items: center; justify-content: space-between; }
+.garage-title { color: #ffffff; font-size: 24px; font-weight: bold; }
+.garage-wallet { color: #ffd84a; font-size: 19px; font-weight: bold; }
+.upgrade-row { width: 760px; height: 96px; flex-direction: row; justify-content: space-between; }
+.upgrade-card { width: 178px; height: 94px; flex-direction: column; align-items: center; justify-content: center; background-color: #244966; border-radius: 8px; border-width: 2px; border-color: #5f86a0; }
+.maxed { background-color: #2f6243; border-color: #79c48c; }
+.upgrade-icon { position: absolute; left: 9px; top: 8px; width: 25px; height: 25px; text-align: center; color: #17324d; font-size: 16px; font-weight: bold; background-color: #f4c430; border-radius: 13px; }
+.upgrade-name { color: #ffffff; font-size: 18px; font-weight: bold; }
+.upgrade-level { color: #9fc1d7; font-size: 13px; }
+.upgrade-effect { color: #d9edf7; font-size: 13px; }
+.upgrade-cost { color: #ffd84a; font-size: 14px; font-weight: bold; margin-top: 3px; }
+.garage-back { width: 110px; height: 25px; margin-top: 3px; justify-content: center; align-items: center; background-color: #e84c32; border-radius: 7px; }
+.garage-back-text { color: #ffffff; font-size: 15px; font-weight: bold; }
+.controls { width: 800px; height: 50px; flex-shrink: 0; flex-direction: row; align-items: center; background-color: #102a43; border-top-width: 2px; border-top-color: #294c66; }
+.control { width: 286px; height: 46px; flex-direction: row; justify-content: center; align-items: center; border-radius: 8px; border-width: 3px; }
+.brake { margin-left: 8px; background-color: #243e53; border-color: #5d7b91; }
+.gas { margin-right: 8px; background-color: #2f7c48; border-color: #63b874; }
+.pressed { background-color: #f4c430; border-color: #fff2a1; }
+.control-label { color: #ffffff; font-size: 19px; font-weight: bold; margin-left: 8px; margin-right: 8px; }
+.control-mark { color: #d9edf7; font-size: 20px; }
+.drive-status { width: 212px; height: 48px; flex-direction: row; justify-content: center; align-items: center; }
+.speed-value { color: #ffffff; font-size: 27px; font-weight: bold; width: 55px; text-align: right; }
+.speed-unit { color: #86a9bd; font-size: 13px; margin-left: 5px; }
+.air-state { color: #ffd84a; font-size: 12px; margin-left: 8px; }
+
+
+.upgrade-hitbox { position: absolute; left: 0px; top: 0px; width: 178px; height: 94px; z-index: 5; }
+
+
+
+
+
+.selection-copy { color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 7px; }
+.map-decor { position: absolute; z-index: 0; }
+.cloud-canyon { background-color: #ffd2a1; }
+.sun-canyon { background-color: #ffdb63; }
+.decor-a-canyon, .decor-b-canyon { bottom: 0px; width: 90px; height: 52px; background-color: #7c352b; border-radius: 8px; }
+.decor-a-canyon { left: 42px; } .decor-b-canyon { right: 65px; height: 38px; }
+.cloud-moon { opacity: 0; }
+.sun-moon { width: 48px; height: 48px; border-radius: 24px; background-color: #a794df; border-width: 7px; border-color: #50488b; }
+.decor-a-moon, .decor-b-moon, .decor-c-moon { width: 5px; height: 5px; border-radius: 3px; background-color: #ffffff; }
+.decor-a-moon { left: 90px; top: 25px; } .decor-b-moon { left: 510px; top: 58px; } .decor-c-moon { left: 630px; top: 20px; }
+.sun-ice { background-color: #dffbff; border-width: 5px; border-color: #9ee6ee; }
+.cloud-ice { background-color: #f3fdff; }
+.decor-a-ice { left: 70px; top: 26px; width: 280px; height: 12px; border-radius: 8px; background-color: #8ff0d4; transform: rotate(-5deg); }
+.decor-b-ice { left: 330px; top: 42px; width: 250px; height: 9px; border-radius: 6px; background-color: #c0a8ff; transform: rotate(4deg); }
+.buggy-shape, .beetle-shape, .rover-shape, .steam-shape { position: absolute; left: 0px; top: 0px; width: 112px; height: 58px; }
+.wheel-beetle { border-color: #6e1737; background-color: #21192b; }
+.wheel-rover { border-color: #d8d3e4; background-color: #302f44; }
+.wheel-steam { border-color: #5b301f; background-color: #221710; }
+.beetle-shell { position: absolute; left: 9px; top: 18px; width: 91px; height: 31px; border-radius: 20px; background-color: #d83c67; border-width: 4px; border-color: #7d173b; }
+.beetle-window { position: absolute; left: 36px; top: 8px; width: 45px; height: 27px; border-radius: 20px; background-color: #8bd5e5; border-width: 4px; border-color: #7d173b; }
+.beetle-spoiler { position: absolute; left: 3px; top: 13px; width: 22px; height: 5px; background-color: #f5b642; border-radius: 3px; }
+.beetle-lamp { position: absolute; left: 93px; top: 27px; width: 8px; height: 8px; border-radius: 4px; background-color: #fff0a0; }
+.rover-deck { position: absolute; left: 6px; top: 31px; width: 102px; height: 17px; border-radius: 6px; background-color: #d7d4be; border-width: 3px; border-color: #5e6075; }
+.rover-pod { position: absolute; left: 40px; top: 12px; width: 48px; height: 24px; border-radius: 12px; background-color: #e9e7d8; border-width: 3px; border-color: #5e6075; }
+.rover-window { position: absolute; left: 8px; top: 4px; width: 27px; height: 12px; border-radius: 7px; background-color: #6cc7d8; }
+.rover-mast { position: absolute; left: 54px; top: 1px; width: 4px; height: 15px; background-color: #8d8aa0; }
+.rover-dish { position: absolute; left: 46px; top: 0px; width: 20px; height: 8px; border-radius: 10px; background-color: #f4c430; transform: rotate(-12deg); }
+.wheel-rover-mid { z-index: 4; }
+.steam-frame { position: absolute; left: 7px; top: 34px; width: 100px; height: 14px; background-color: #7f452b; border-radius: 4px; border-width: 3px; border-color: #3f281d; }
+.steam-boiler { position: absolute; left: 34px; top: 15px; width: 58px; height: 29px; border-radius: 15px; background-color: #b86a31; border-width: 4px; border-color: #4b2c20; }
+.steam-cab { position: absolute; left: 8px; top: 10px; width: 31px; height: 35px; background-color: #456b62; border-width: 4px; border-color: #263f3b; border-radius: 5px; }
+.steam-stack { position: absolute; left: 79px; top: 1px; width: 13px; height: 23px; background-color: #353333; border-radius: 3px; }
+.steam-lamp { position: absolute; left: 96px; top: 25px; width: 9px; height: 9px; border-radius: 5px; background-color: #ffe169; }
+.garage-head { height: 29px; }
+.garage-selection { color: #b9d6e6; font-size: 14px; }
+.garage-tabs { width: 420px; height: 28px; flex-direction: row; justify-content: space-between; margin-bottom: 3px; }
+.garage-tab { width: 132px; height: 26px; align-items: center; justify-content: center; border-radius: 7px; background-color: #244966; border-width: 2px; border-color: #527590; }
+.garage-tab-active { background-color: #f4c430; border-color: #fff0a0; }
+.garage-tab-text { color: #ffffff; font-size: 15px; font-weight: bold; }
+.garage-tab-text-active { color: #17324d; }
+.content-row { width: 760px; height: 86px; flex-direction: row; justify-content: space-between; }
+.content-card { width: 178px; height: 84px; flex-direction: column; justify-content: center; align-items: center; border-radius: 9px; border-width: 2px; border-color: #6489a3; background-color: #244966; }
+.content-selected { background-color: #2f6243; border-color: #8dda9d; }
+.content-locked { background-color: #313b4b; border-color: #6f7480; }
+.content-icon { position: absolute; left: 9px; top: 8px; width: 24px; height: 24px; border-radius: 12px; text-align: center; color: #17324d; background-color: #f4c430; font-size: 15px; font-weight: bold; }
+.content-name { color: #ffffff; font-size: 18px; font-weight: bold; }
+.content-trait { color: #b9d6e6; font-size: 13px; margin-top: 2px; }
+.content-cost { color: #ffd84a; font-size: 13px; font-weight: bold; margin-top: 4px; }
+.garage-back { position: absolute; right: 18px; top: 4px; margin-top: 0px; }
+.about-trigger { position: absolute; right: 8px; top: 45px; width: 25px; height: 25px; border-radius: 13px; background-color: #f4c430; border-width: 2px; border-color: #fff0a0; align-items: center; justify-content: center; z-index: 60; }
+.about-trigger-left { left: 8px; right: 767px; }
+.about-trigger-text { color: #17324d; font-size: 19px; line-height: 22px; font-weight: bold; text-align: center; }
+.about-mask { position: absolute; left: 0px; top: 0px; width: 800px; height: 100%; min-height: 254px; background-color: rgba(4, 17, 29, 0.82); align-items: center; justify-content: center; z-index: 100; }
+.about-card { width: 520px; height: 218px; padding-left: 28px; padding-right: 28px; padding-top: 14px; padding-bottom: 12px; border-radius: 15px; border-width: 4px; border-color: #f4c430; background-color: #17324d; align-items: center; }
+.about-title { color: #ffd84a; font-size: 25px; line-height: 31px; font-weight: bold; text-align: center; }
+.about-copy { width: 450px; color: #d9edf7; font-size: 15px; line-height: 21px; text-align: center; margin-top: 4px; }
+.about-label { color: #8eb6ce; font-size: 13px; margin-top: 5px; }
+.about-author-hitbox { width: 180px; height: 29px; align-items: center; justify-content: center; }
+.about-author { color: #ffffff; font-size: 20px; line-height: 25px; font-weight: bold; text-align: center; }
+.about-reward { height: 20px; color: #8dda9d; font-size: 14px; line-height: 18px; font-weight: bold; text-align: center; }
+.about-close { width: 104px; height: 30px; border-radius: 8px; background-color: #f4c430; border-width: 2px; border-color: #fff0a0; align-items: center; justify-content: center; }
+.about-close-text { color: #17324d; font-size: 16px; font-weight: bold; }
+

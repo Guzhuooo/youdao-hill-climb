@@ -1,0 +1,25 @@
+﻿node_modules/
+ui/node_modules/
+aiot-vue-cli/node_modules/
+ui/.falcon_/
+ui/*.amr
+!releases/**/*.amr
+
+# Local SDKs/toolchains and device investigation
+armv7-eabihf--glibc--stable-2018.11-1/
+X5versionInfo/
+device_audit/
+*.log
+device-capture*.png
+device-probe.png
+known-app.png
+test/*.png
+
+# Local historical binaries (curated release files live under releases/)
+dist/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
